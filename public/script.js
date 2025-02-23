@@ -128,8 +128,6 @@ function detectSwingErrors(keypoints) {
 
     let handsStartRight = rightWrist.x > leftShoulder.x - 100;
     let handsEndLeft = rightWrist.x < leftShoulder.x + 50;
-    let rand = 0;
-    let samples = ["Your shifting early. Try engaging your hips.","You lower your hands.  Don't drop them.  You will loose power.", "That was a home run"]
 
     let swingDetected = wristMovingFast && hipRotating && handsStartRight && handsEndLeft;
 
@@ -146,9 +144,7 @@ function detectSwingErrors(keypoints) {
         }
 
         if (leftHip.y > leftShoulder.y) {
-            rand = Math.random(3);
-            feedbackType = samples[Math.floor(Math.random() * samples.length)];
-            console.log(feedbackType) 
+            feedbackType = "Your shifting early. Try engaging your hips."; 
         }
 
         if (!feedbackType) {
