@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hitting Coach</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+    <!-- Load TensorFlow MoveNet Pose Detection -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+    <script defer src="script.js"></script>
+    <style>
+        video { width: 100%; max-width: 640px; }
+    </style>
+</head>
+<body>
+    <h1>⚾ AI Hitting Coach – Real-Time Feedback ⚾</h1>
+    <video id="webcam" autoplay></video>
+    <audio id="commentaryAudio"></audio>
+</body>
+</html>
